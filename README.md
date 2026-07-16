@@ -26,3 +26,9 @@ Suggestions:
  * edit this cluster with: kops edit cluster subhrajit.k8s.local
  * edit your node instance group: kops edit ig --name=subhrajit.k8s.local nodes-ap-south-1a
  * edit your control-plane instance group: kops edit ig --name=subhrajit.k8s.local control-plane-ap-south-1a
+
+
+if you want to delete :  kops delete cluster --name subhrajit.k8s.local --yes
+
+----------------------------------------------------------------
+
