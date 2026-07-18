@@ -5,8 +5,8 @@ set -e
 # -------------------------------
 # Variables
 # -------------------------------
-BUCKET_NAME="reyaz-kops-testbkt7867.k8s.local"
-CLUSTER_NAME="reyaz.k8s.local"
+BUCKET_NAME="subhrajit-kops-testbkt7867.k8s.local"
+CLUSTER_NAME="subhrajit.k8s.local"
 REGION="ap-south-1"
 ZONES="ap-south-1a,ap-south-1b"
 
