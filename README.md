@@ -32,3 +32,10 @@ if you want to delete :  kops delete cluster --name subhrajit.k8s.local --yes
 
 ----------------------------------------------------------------
 
+if you want to new kops.sh then used this 
+
+kops delete cluster \
+  --name=subhrajit.k8s.local \
+  --state=s3://subhrajit-kops-testbkt7867.k8s.local \
+  --yes
+  ---------------------------------------------------------------
