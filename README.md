@@ -38,4 +38,14 @@ kops delete cluster \
   --name=subhrajit.k8s.local \
   --state=s3://subhrajit-kops-testbkt7867.k8s.local \
   --yes
+
+  if it not work then used 
+  export KOPS_STATE_STORE=s3://subhrajit-kops-testbkt7867.k8s.local 
+  
+  this and do once again 
+  
+  kops delete cluster \
+  --name=subhrajit.k8s.local \
+  --state=s3://subhrajit-kops-testbkt7867.k8s.local \
+  --yes
   ---------------------------------------------------------------
