@@ -49,3 +49,4 @@ kops delete cluster \
   --state=s3://subhrajit-kops-testbkt7867.k8s.local \
   --yes
   ---------------------------------------------------------------
+in your k8s if curl is not working ya if you want frontend to db contection check then used telnet its very used ful 
