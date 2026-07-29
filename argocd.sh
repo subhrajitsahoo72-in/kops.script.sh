@@ -1,0 +1,21 @@
+#install agrocd useing helm 
+#Setup KOPS
+# Install HELM
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+helm version
+#Install ARGOCD using HELM
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update 
+# do work 
+kubectl create namespace argocd
+helm install argocd argo/argo-cd --namespace argocd   [argocd is release, argo is repo, argo-cd is chartname]
+kubectl get all -n argocd
+# EXPOSE ARGOCD SERVER: by default its cluster IP change it into loadbalmncer
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+#TO GET ARGO CD PASSWORD:
+kubectl -n argocd get secret argocd-initial-admin-secret \
+  -o jsonpath="{.data.password}" | base64 -d 
+  # passward like  
+  xY7Kp9Lm2QwA
