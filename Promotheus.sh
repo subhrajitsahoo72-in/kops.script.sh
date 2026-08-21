@@ -42,3 +42,13 @@ ExecStart=/usr/local/bin/prometheus \
   --web.enable-lifecycle
 [Install]
 WantedBy=multi-user.target
+
+# after that used this command 
+
+sudo systemctl enable prometheus
+
+sudo systemctl start prometheus
+
+sudo systemctl status prometheus
+
+journalctl -u prometheus -f --no-pager   [to check logs]
