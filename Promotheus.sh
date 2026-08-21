@@ -52,3 +52,23 @@ sudo systemctl start prometheus
 sudo systemctl status prometheus
 
 journalctl -u prometheus -f --no-pager   [to check logs]
+
+
+Goto Manage Jenkins –> Plugins –> Available Plugins --> Prometheus and install it and restart
+
+To create a static target, you need to add job_name with static_configs 
+
+Go to Prometheus server
+
+sudo vi /etc/prometheus/prometheus.yml
+
+  - job_name: 'jenkins'
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['<jenkins-ip>:8080']
+
+
+promtool check config /etc/prometheus/prometheus.yml
+
+sudo systemctl restart prometheus
+
