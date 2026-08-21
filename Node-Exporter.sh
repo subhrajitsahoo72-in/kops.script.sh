@@ -28,3 +28,13 @@ ExecStart=/usr/local/bin/node_exporter \
     --collector.logind
 [Install]
 WantedBy=multi-user.target
+
+#  ued this below command 
+
+sudo systemctl enable node_exporter
+
+sudo systemctl start node_exporter
+
+sudo systemctl status node_exporter
+
+journalctl -u node_exporter -f --no-pager 
